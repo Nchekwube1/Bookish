@@ -27,7 +27,6 @@ export default function Header() {
         backgroundColor={theme.deepBlue}
         width={"18%"}
         height={"100vh"}
-        borderRightRadius={"10px"}
       >
         <Box
           position={"relative"}

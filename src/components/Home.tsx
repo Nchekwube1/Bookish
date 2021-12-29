@@ -18,10 +18,18 @@ export default function Home() {
       position={"relative"}
       width={"100%"}
       display={"flex"}
+      flexDir={"column"}
       justifyContent={"center"}
       alignItems={"center"}
     >
-      <Box pos={"relative"} width={"40%"} py={"20px"}>
+      <Box
+        pos={"relative"}
+        width={"40%"}
+        mt={"20px"}
+        p={"40px"}
+        backgroundColor={"gray.50"}
+        borderRadius={"base"}
+      >
         <form className="form">
           <FormControl isRequired>
             <Input
@@ -102,6 +110,87 @@ export default function Home() {
             </Button>
           </FormControl>
         </form>
+      </Box>
+      <Box
+        pos={"relative"}
+        width={"100%"}
+        display={"flex"}
+        flexDir={"column"}
+        alignItems={"center"}
+      >
+        <Box pos={"relative"} my={"30px"}>
+          <Text
+            fontFamily={"heading"}
+            fontSize={"21px"}
+            textTransform={"capitalize"}
+            _after={{
+              content: `""`,
+              position: "absolute",
+              width: "50%",
+              height: "5px",
+              borderRadius: "3px",
+              backgroundColor: theme.deepBlue,
+              bottom: -1,
+              right: 0,
+              transform: "translateX(-50%)",
+            }}
+          >
+            all books
+          </Text>
+        </Box>
+
+        <Box
+          pos={"relative"}
+          width={"100%"}
+          display={"flex"}
+          flexDir={"column"}
+          px={"15px"}
+          flexWrap={"wrap"}
+          //   alignItems={"center"}
+        >
+          <Box
+            pos={"relative"}
+            width={"180px"}
+            height={"250px"}
+            backgroundColor={theme.deepBlue}
+            borderRadius={"8px"}
+            borderBottomLeftRadius={"20px"}
+            boxShadow={"md"}
+            // borderBottomRightRadius={"20px"}
+          >
+            <Box
+              pos={"absolute"}
+              width={"174px"}
+              height={"35px"}
+              bottom={1}
+              right={0}
+              backgroundColor={theme.gray}
+              borderLeftRadius={"300px"}
+              borderBottomColor={theme.deepBlue}
+              //   borderBottom={"2px"}
+              _after={{
+                content: `""`,
+                position: "absolute",
+                bottom: 1,
+                height: "1px",
+                borderLeftRadius: "300px",
+                right: 0,
+                width: "165px",
+                backgroundColor: "#ccc",
+              }}
+              _before={{
+                content: `""`,
+                position: "absolute",
+                top: 1,
+                height: "1px",
+                borderLeftRadius: "300px",
+                right: 0,
+                width: "165px",
+                backgroundColor: "#ccc",
+              }}
+            ></Box>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
