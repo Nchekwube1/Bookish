@@ -9,10 +9,24 @@ const books = [
   },
 ];
 
+const authors = [
+    {
+        name:"chimamanda adichie"
+    },
+    {
+        name:"dan brown"
+    },
+    {
+        name:"ola rotimi"
+    },
+]
+
 const resolvers = {
   Query: {
     books: () => books,
-  },
+    authors: () => books,
+
+  }
 };
 
 export default resolvers
