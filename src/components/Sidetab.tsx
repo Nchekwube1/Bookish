@@ -1,6 +1,5 @@
 import { Box, Text, Image } from "@chakra-ui/react";
 import { useState } from "react";
-import theme from "../theme/theme";
 import { Link, Route } from "react-router-dom";
 
 export interface tabProps {
@@ -10,16 +9,9 @@ export interface tabProps {
 export interface Props {
   image: string;
   text: string;
-  index: number;
+  col:string;
 }
-export default function SideTab({ image, text, index }: Props) {
-  const [val, setVal] = useState<number>(0);
-  function bg() {
-    if (index !== val) {
-      return theme.deepBlue;
-    }
-    return theme.lightPurple;
-  }
+export default function SideTab({ image, text, col}: Props) {
   function route() {
     if (text === "home") {
       return "/";
@@ -28,10 +20,6 @@ export default function SideTab({ image, text, index }: Props) {
   }
   return (
     <Box
-      // onClick={() => {
-      //   setVal(index);
-      // }}
-      on
       position={"relative"}
       width={"86%"}
       display={"flex"}
@@ -39,10 +27,8 @@ export default function SideTab({ image, text, index }: Props) {
       alignItems={"center"}
       paddingY={"10px"}
       paddingX={"14px"}
-      backgroundColor={bg()}
-      _hover={{ backgroundColor: theme.lightPurple }}
-      _selected={{ backgroundColor: theme.lightPurple }}
       cursor={"pointer"}
+      className={col}
     >
       <Link to={route()} className="link">
         <Image

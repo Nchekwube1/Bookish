@@ -16,7 +16,9 @@ const tabItems: tabProps[] = [
 ];
 export default function Header() {
   const [val, setVal] = useState<number>(0);
-
+  function setting(n:number){
+    setVal(n)
+  }
   return (
     <>
       <Box
@@ -63,7 +65,7 @@ export default function Header() {
           paddingTop={"25px"}
         >
           {tabItems.map(({ image, text }, index) => {
-            return <Tab key={index} image={image} text={text} index={index} />;
+            return <Tab  key={index} image={image} text={text}  col={index === val? "bg":""} />;
           })}
         </Box>
       </Box>

@@ -146,7 +146,6 @@ export default function Home() {
           flexDir={"column"}
           px={"15px"}
           flexWrap={"wrap"}
-          //   alignItems={"center"}
         >
           <Box
             pos={"relative"}
@@ -156,8 +155,29 @@ export default function Home() {
             borderRadius={"8px"}
             borderBottomLeftRadius={"20px"}
             boxShadow={"md"}
-            // borderBottomRightRadius={"20px"}
           >
+            <Box
+              pos={"relative"}
+              width={"100%"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+              padding={"6px"}
+              marginBottom={"12px"}
+            >
+              <Text color={"white"} textTransform={"capitalize"} fontSize={"20px"}  fontFamily={"sans-serif"}>Purple hibiscus</Text>
+            </Box>
+            <Box
+              pos={"relative"}
+              width={"100%"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+              padding={"6px"}
+              marginBottom={"12px"}
+            >
+              <Text  color={"white"} textTransform={"capitalize"} fontSize={"17px"}  fontFamily={"sans-serif"}>by</Text>
+            </Box>
             <Box
               pos={"absolute"}
               width={"174px"}
@@ -167,7 +187,6 @@ export default function Home() {
               backgroundColor={theme.gray}
               borderLeftRadius={"300px"}
               borderBottomColor={theme.deepBlue}
-              //   borderBottom={"2px"}
               _after={{
                 content: `""`,
                 position: "absolute",
