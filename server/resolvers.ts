@@ -24,7 +24,7 @@ const authors = [
 const resolvers = {
   Query: {
     books: () => books,
-    authors: () => books,
+    authors: () => authors,
 
   }
 };

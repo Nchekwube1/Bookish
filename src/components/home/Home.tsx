@@ -7,8 +7,8 @@ import {
   Select,
   FormControl,
 } from "@chakra-ui/react";
-import add from "../assets/add.svg";
-import theme from "../theme/theme";
+import add from "../../assets/add.svg";
+import theme from "../../theme/theme";
 import { useState } from "react";
 export default function Home() {
   const [addAuthor, setAddAuthor] = useState<boolean>(false);

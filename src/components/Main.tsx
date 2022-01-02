@@ -1,10 +1,10 @@
 import { Box, Text, Image } from "@chakra-ui/react";
 import theme from "../theme/theme";
 import { Route, Routes } from "react-router-dom";
-import Home from "./Home";
-import Book from "./Book";
-import Search from "./Search";
-import Author from "./Author";
+import Home from "./home/Home";
+import Book from "./book/Book";
+import Search from "./search/Search";
+import Author from "./author/Author";
 
 export default function Main() {
   return (
