@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
-    // "esModuleInterop": true,
-    "module": "CommonJS",
+      "target": "es2017",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false
   }
 }

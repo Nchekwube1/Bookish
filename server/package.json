@@ -8,9 +8,12 @@
     "apollo-server": "^3.6.1",
     "cors": "^2.8.5",
     "nodemon": "^2.0.15",
-    "ts-node": "^10.4.0"
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.4.0",
+    "typeorm": "^0.2.41"
   },
   "scripts": {
-    "start":"nodemon --exec ts-node index.ts"
+    "start": "nodemon --exec ts-node index.ts"
   }
 }
