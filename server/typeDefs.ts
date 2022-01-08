@@ -1,19 +1,21 @@
 import {ApolloServer,gql} from "apollo-server"
 const typeDefs = gql`
   type Book {
-    title: String
+    title: String,
+    genre: String,
     author: String
   }
 
   type Query {
-    books: [Book]
+    books: [Book],
+    authors: [Author]
   }
   type Author {
-    name: String
+    name: String,
   }
 
-  type Query {
-    authors: [Author]
+  type Mutation{
+    addBook(title:String!, author:String!, genre:String!): Book
   }
 `
   export default typeDefs
