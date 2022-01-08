@@ -1,12 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-type SliceState = { index: number }
-const initialState: SliceState = { index:0  }
+import { bookType } from "../../constants/constants";
+type SliceState = { books: bookType[] }
+const initialState: SliceState = { books:[]}
 const slice = createSlice({
   name: 'sideSlice',
   initialState,
   reducers: {
-    indexChange(state, {payload}: PayloadAction<SliceState>){state.index = payload.index},
+    setBook(state, {payload}: PayloadAction<SliceState>){state.books = payload.books},
   },
 })
-export const {indexChange} = slice.actions
+export const {setBook} = slice.actions
 export default slice.reducer
