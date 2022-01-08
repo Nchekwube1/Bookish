@@ -2,26 +2,15 @@ import { Box, Text, Image, } from "@chakra-ui/react";
 import {useDispatch,useSelector} from "react-redux"
 import theme from "../../theme/theme";
 import book from "../../assets/bookImg1.svg";
-import bookTab from "../../assets/booktab.svg";
-import homeTab from "../../assets/hometab.svg";
-import writerTab from "../../assets/writertab.svg";
-import searchTab from "../../assets/search.svg";
+
 import { indexChange } from "./sideSlice";
 import { AppDispatch, RootState } from "../../store";
 import { Link } from "react-router-dom";
 import "../../index.css";
+import { tabItems } from "../../constants/constants";
 
-export interface tabProps {
-  image: string;
-  text: string;
-}
 
-const tabItems: tabProps[] = [
-  { image: homeTab, text: "home" },
-  { image: bookTab, text: "books" },
-  { image: writerTab, text: "authors" },
-  { image: searchTab, text: "search" },
-];
+
 export default function Header() {
   const val = useSelector<RootState>(state=> state.sideSlice.index)
   const dispatch = useDispatch<AppDispatch>()
