@@ -64,7 +64,7 @@ export default function Header() {
           />
           <Text
             color={"white"}
-            fontFamily={"cursive"}
+            fontFamily={"heading"}
             textTransform={"capitalize"}
             fontSize={"20px"}
             textAlign={"center"}
@@ -111,7 +111,7 @@ export default function Header() {
                    />
                    <Text
                      color={"white"}
-                     fontFamily={"fantasy"}
+                     fontFamily={"monospace"}
                      textTransform={"capitalize"}
                      fontSize={"17px"}
                      textAlign={"center"}
