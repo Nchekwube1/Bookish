@@ -7,10 +7,48 @@ import {
   Select,
   FormControl,
 } from "@chakra-ui/react";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  useQuery,
+  gql
+} from "@apollo/client";
+import {useDispatch,useSelector} from "react-redux"
+import { useEffect, useState } from "react";
 import add from "../../assets/add.svg";
 import theme from "../../theme/theme";
-import { useState } from "react";
+import { AppDispatch, RootState } from "../../store";
+import {setBook} from './homeSlice'
+const graphqlClient = new ApolloClient({
+  uri: "http://localhost:4000",
+  cache: new InMemoryCache()
+})
+
 export default function Home() {
+  const booksArray = useSelector<RootState>(state=> state.homeSlice.books)
+  const dispatch = useDispatch<AppDispatch>()
+  useEffect(() => {
+  graphqlClient.query({
+    query: gql`
+    query Books {
+      books {
+        title
+        genre
+        author
+      }
+    }
+    `
+  }).then(res => {
+    dispatch(
+      setBook({
+        books: res.data.books
+      })
+    )
+    console.log(booksArray)
+  }
+  )
+  },[])
   const [addAuthor, setAddAuthor] = useState<boolean>(false);
   const [addGenre, setAddGenre] = useState<boolean>(false);
   return (
