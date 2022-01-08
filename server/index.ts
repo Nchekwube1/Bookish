@@ -3,7 +3,7 @@ import { createConnection } from "typeorm";
 import typeDefs from "./typeDefs"
 import resolvers from "./resolvers" 
  import {ApolloServer,gql} from "apollo-server"
-const connection = createConnection().then(()=>{
+createConnection().then(async connection=>{
   console.log("connection success")
 })
 const server = new ApolloServer({ typeDefs, resolvers });
