@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { bookType } from "../../constants/constants";
+import { bookType } from "../../constants/types";
 type SliceState = { books: bookType[] }
 const initialState: SliceState = { books:[]}
 const slice = createSlice({
