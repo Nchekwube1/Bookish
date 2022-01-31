@@ -28,9 +28,10 @@ export default function Header() {
   return (
     <>
       <Box
-        position={"absolute"}
+        position={"fixed"}
         left={0}
         top={0}
+        bottom={0}
         zIndex={200}
         backgroundColor={theme.deepBlue}
         width={"18%"}

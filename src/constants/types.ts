@@ -1,5 +1,5 @@
 export interface bookType{
-    name: string;
+    title: string;
     genre:string;
     author:string;
 }
